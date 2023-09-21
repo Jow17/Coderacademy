@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes colorful-text {
+    0% {
+        background:salmon;
+
+    }
+    50% {
+        background: yellow;
+        transform: translate(100px);
+    }
+
+    100% {
+        background: blue;
+        transform: translate(100px) rotate(45deg);
+    }
+}
+
+div {
+    width: 100px;
+    position: relative;
+    height: 100px;
+    background: salmon;
+    transition: transform 2s;
+    
+    
+}
+
+div:hover {
+    left: 0;
+    /*transform: translateX(100px) rotate(90deg) scale(0.5, 2);*/
+    animation: colorful-text 2s ease-in-out;
+}
