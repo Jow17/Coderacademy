@@ -1,0 +1,5 @@
+src/__pycache__
+.venv
+.vscode
+src/.pytest_cache
+.DS_Store
