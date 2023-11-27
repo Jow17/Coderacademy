@@ -4,7 +4,7 @@ from datetime import date
 from flask_marshmallow import Marshmallow
 from flask_bcrypt import Bcrypt
 from sqlalchemy.exc import IntegrityError
-from flask_jwt_extended import create_refresh_token, JWTManager, create_access_token, jwt_required 
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required
 from datetime import timedelta
 
 app = Flask(__name__)
@@ -16,7 +16,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://trello_dev:spameg
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
 bcrypt = Bcrypt(app)
-jwt = JWTManager(app)
+jwt = JWTManager(app) 
 
 class Card(db.Model):
     __tablename__ = 'cards'
@@ -129,8 +129,7 @@ def login():
     else:
         return {"error": "Invalid email or password"}, 401
     # print(user)
-    return "ok"
-    
+
 @app.route("/cards")
 @jwt_required()
 def all_cards():
