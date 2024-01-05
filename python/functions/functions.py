@@ -25,3 +25,5 @@ def calc_grand_total(amount):
 subtotal = float(input('Subtotal: $'))
 grand_total = calc_grand_total(subtotal)
 print (f'Total: ${grand_total:.2f}')
+
+blip bloop 
