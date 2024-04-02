@@ -24,3 +24,4 @@ print(galadriel.__dict__)
 # print(frodo.inv.get_currency())
 # print(chest.inv.__dict__)
 
+# yeet
